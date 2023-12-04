@@ -16,7 +16,7 @@ const HomeScreen = () => {
   const API_KEY1 = process.env.REACT_APP_API_KEY1;
   const API_KEY2 = process.env.REACT_APP_API_KEY2; 
 
-  const { data:homeFeedData , loading:homeFeedLoading } = FETCH_API(`home`,API_KEY1);
+  const { data:homeFeedData , loading:homeFeedLoading } = FETCH_API(`home?geo=IN`,API_KEY1);
   console.log(homeFeedLoading);
 
   const getCategoriesData = async() => {

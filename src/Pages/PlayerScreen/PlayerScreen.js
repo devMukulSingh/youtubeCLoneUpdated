@@ -82,7 +82,7 @@ return (
                       <IconContext.Provider value={{ size:"1.5rem" }}>
 
                        <span><button className="btn__like"><BiLike className='likeIcon'/>
-                          { abbreviate(videoData?.likeCount,1).toString().toLocaleUpperCase()  }
+                         14k  {/* { abbreviate(videoData?.likeCount,1).toString().toLocaleUpperCase()  } */}
                        </button> <button className="dislikeIcon"><AiOutlineDislike /></button></span> 
                       </IconContext.Provider>
                       <button> <ShareOutlinedIcon/> Share </button>

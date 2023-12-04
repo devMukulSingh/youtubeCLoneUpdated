@@ -39,6 +39,8 @@ const CategoriesBar = ( {setCategoryQuery} ) => {
     "Next Js",
     "AWS",
     "TypeScript",
+    "Docker",
+    "DevOps"
     ];
     const [activeElement,setActiveElement] = useState('All');
     const handleClick = (value) => {

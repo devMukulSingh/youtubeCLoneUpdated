@@ -1,0 +1,47 @@
+@import "../../base";
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    // background: #f7f7f7;
+  }
+  
+  .app{
+    display: flex;
+    height: 90vh;
+    margin-top: 10vh;
+    padding-right: 0 !important;
+
+    &__outlet{
+      overflow-x: hidden;
+    }
+
+}
+
+
+@media(max-width:$breakpoint-medium){
+  .app{
+    &__outlet{
+      padding:0rem 1rem;
+      &.close{
+
+      }
+    }
+  }
+}
+
+//////////////////MEDIUM TABLET  ends/////////////
+
+/////////SMALL MOBILE/ STARTS//////////
+@media(max-width:$breakpoint-small){
+  .app{
+    &__outlet{
+      padding:0rem;
+    }
+  }
+}
+
+/////////SMALL MOBILE///ENDS////////
+
+
+    

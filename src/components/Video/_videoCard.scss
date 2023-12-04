@@ -1,0 +1,84 @@
+@import "../../base.scss";
+
+.link{
+    text-decoration: none;
+    color: #000;
+}
+.videoCard{
+    width: 97%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    &__top{
+        position:relative;
+        img{
+            object-fit: contain;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 0.7rem;
+        }
+        span{
+            position: absolute;
+            bottom: 0.2rem;
+            right: 0.3rem;
+            background: #000;
+            color: white;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.3rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+
+        }
+    }
+    &__details{
+        display: flex;
+        padding: 0 10px;
+        img{
+            margin-top:1rem;
+            margin-right:0.5rem ;
+            border-radius: 50%;
+            width:2.5rem;
+            height: 2.2rem;
+            object-fit: contain;
+        }
+        &__title{
+            justify-content: space-around;
+            overflow: hidden;
+            margin-top:1rem;
+            h6{
+                font-size: 2vmin;
+                font-weight: 500;
+                @include line-clamp(2);
+            }
+                span{
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: #808080;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width:600px){
+        .videoCard{
+            width: 100%;
+            &__top{
+                img{
+                    border-radius: 0;
+                }
+            }
+            &__details{
+                &__title{
+                    h6{
+                        font-size: 18px;
+                    }
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+            }
+        }
+       
+    }

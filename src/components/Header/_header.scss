@@ -1,0 +1,106 @@
+@import "../../base.scss";
+
+input:focus{
+    outline: none;
+}
+
+.header{
+    position: fixed;
+    // position: -webkit-sticky !important; 
+    // position: sticky !important;
+    background: white;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    margin-top: 0rem ;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    padding: 0rem calc(1px + 1.5625vw);
+
+    &__logoDiv{
+        flex:0.2;
+        display: flex;
+        align-items: center;
+        img{
+            margin-left:calc(0px + 1.5625vw);
+            width: 6rem;
+            height: 1.5rem;
+            object-fit: contain;
+        }
+    }
+    &__menuIcon{
+        font-size:  1.7rem !important;
+        // padding: 1.5rem !important;
+        &:hover{
+            background: #ebebeb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    &__formDiv{
+        flex: 0.7;
+        justify-content: center;
+        display: flex;
+    }
+    form{
+        border: 2px solid #eaeaea;
+        border-radius: 2rem;
+        width: 40vw;  
+        display: flex;
+        padding: 0.3rem 0.5rem;
+        
+        input{
+            width: 100%;
+            padding: 0 0.2rem;
+            border: none;
+            &:focus{
+                outline: none;
+            }
+
+        }
+        button{
+            padding: 0 0.4rem;
+            background: transparent;
+            border: none;
+        }
+    }
+    &__icons{
+        flex: 0.1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10%;
+
+        img{
+            width: 2rem;
+        }
+    }
+}
+
+@media(max-width : $breakpoint-small){
+    .header{
+        padding: 0.5rem;
+        &__logoDiv{
+            flex: 0.1;
+            &__menuIcon{
+                display: block !important;
+            }
+            img{
+                display: none;
+            }
+        }
+    
+        &__icons > *:not(img){
+            display: none;
+            flex: 0.1;
+        }
+        &__formDiv{
+            flex: 0.9;
+          form{
+            flex:0.8;
+          }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import "../../base.scss";
+
+.carousel{
+    margin: 2rem 0;
+
+    .react-multi-carousel-list{
+        overflow:visible ;
+        ul{
+          
+            gap: 1rem !important;
+            li{
+                width: auto !important;
+            }
+        }
+
+ 
+            .react-multiple-carousel__arrow::before{
+                color: #000;
+                background: linear-gradient(to left,var(--yt-spec-base-background) 20%,rgba(255,255,255,0) 80%);
+            }
+            .react-multiple-carousel__arrow--left {
+                left: -13px !important ;
+            }   
+            .react-multiple-carousel__arrow--right {
+                right: -13px !important;
+            }
+            .react-multiple-carousel__arrow {
+                min-width: 39px !important;
+                min-height: 39px !important;
+                border-radius: 0 ;
+                background: linear-gradient(194deg, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 52%);
+                box-shadow: -1px 0px 35px 20px rgba(255, 255, 255, 0.73);
+                
+                &:hover{
+                    border-radius: 35px;
+                }
+            }
+    }
+
+    span{
+        border: 1px solid transparent;
+        border-radius: 10px;
+        white-space: nowrap;
+        padding: 7px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #ebebeb;
+
+        &:hover{
+            background: #dadada;
+            cursor: pointer;
+        }
+        &.active{
+            background: #000;
+            color: white;
+        }
+    }
+}

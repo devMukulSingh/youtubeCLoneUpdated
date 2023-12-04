@@ -1,0 +1,33 @@
+@import "../../base";
+
+.comments{
+    img{
+        width: 3rem;
+        border-radius: 50%  ;
+    }
+    display: flex;
+    gap:1rem;
+    margin-top: 2rem;
+    padding: 0 0 0 10px;
+
+    &__userData{
+        display: flex;
+        gap:2px;
+        flex-direction: column;
+       .userDetails{
+        display: flex;
+        align-items: center;
+        gap:10px;
+            h6:nth-child(2){
+                font-weight: 400;
+                font-size: 14px;
+            }
+       }
+       .commentText{
+        h6{
+            font-weight: 400;
+        }
+       }
+
+    }
+}

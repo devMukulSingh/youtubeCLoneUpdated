@@ -1,0 +1,179 @@
+@import "../../base";
+
+.playerScreen{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+
+    &__player{
+        margin: 1rem 1rem;
+        height:60vmin;
+
+    }
+     
+    &__title{
+        margin: 0.0rem 1rem;
+    }
+    
+    &__videoDetails{
+        // white-space: nowrap;
+        margin-left: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        &__buttons{
+             white-space: nowrap;
+            margin: 0.4rem 0.5rem;
+            overflow-x:scroll;
+               &::-webkit-scrollbar{
+            display: none;
+        }
+        }
+        button{
+            font-size: 0.9rem;
+            border-radius: 17px;
+            height: 2.4rem;
+            padding: 0.2rem 1rem;
+            border: none;
+            margin : 0rem 0.3rem;
+            font-weight: 500;
+            &.dislikeIcon{
+            
+                margin-left: -10px !important;
+                border-top-right-radius: 17px;
+                border-bottom-right-radius: 17px;
+                border-bottom-left-radius:0px;
+                border-top-left-radius: 0px;
+            }
+            &.btn__like{
+            
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius:17px;
+                border-top-left-radius: 17px;
+               margin-right: 0;
+
+            }
+            &.btn__like > .likeIcon{
+               margin-right: 0.5rem;
+            }
+            
+            }
+            &__info{
+                // white-space: nowrap;
+                margin-top: 0.5rem;
+                display: flex;
+                button{
+                    &.subscribeBtn{
+                        background-color: #000 !important;
+                        color: white;
+                        &:hover{
+                            background: #2d2d2d;
+                        }
+                    }
+                    &.subscribedBtn{
+                        background-color: #ededed;
+                        color: black;
+                        &:hover{
+                            background:#dedede ;
+                        }
+                    }
+                    &:hover{
+                        background: #dedede;
+                    }
+                }
+
+                p{
+                    font-size: 0.9rem;
+                    color: #7f7f7f;
+                }
+                h6{
+                    font-size: 0.9rem;
+                    white-space: nowrap;
+                }
+                
+                img{
+                    width: 3rem;
+                    object-fit: contain;
+                    border-radius: 50%;
+                }
+                }
+               
+    }
+
+    &__viewsTime{
+
+        margin:0.1rem 0.5rem;
+        background: #ededed;
+        border-radius: 1rem;
+        height: 5.5rem;
+        padding: 0.7rem;
+        @include line-clamp(3);
+        span{
+            font-weight: 500;
+        }
+    }
+    &__comments{
+        padding-left: 10px;
+            margin: 1rem 0;
+    }
+
+}
+@media(max-width:1330px){
+    .playerScreen{
+        &__videoDetails{
+            flex-direction: column;
+
+            &__info{
+                position: relative;
+    
+                button{
+                    right: 1.5rem;
+                    position: absolute;
+                }
+            }
+            &__buttons{
+                display: flex;
+                justify-content: flex-start;
+                margin: 0.5rem 0rem;
+                button{
+                    margin-right:2rem;
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:$breakpoint-medium){
+    .container-fluid{
+        padding: 0 !important;
+    }
+    .playerScreen{
+
+        &__player{
+            height: 50vh;
+            width: 100%;
+        }
+
+    }    
+}
+@media( max-width:$breakpoint-small){
+  
+    .playerScreen{
+
+        &__player{
+            height: 35vh;
+            width: 100vw;
+            margin:0.0rem 0rem;
+        }
+        &__title{
+            margin-top:0.5rem;
+        }
+        &__videoDetails{
+            &__info{
+                button{
+                    right: 0;
+                }
+        }   }
+    }
+}

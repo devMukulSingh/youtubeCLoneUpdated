@@ -1,0 +1,109 @@
+@import "../../base";
+
+.sidebar{ 
+    position:sticky;
+    top: 0;
+    z-index: 1; 
+    background: white;
+    display: flex;
+    height: 100%;
+    padding: 0rem 3rem 0rem 0rem;
+    flex-direction: column; 
+    margin-right:auto;
+
+    &.close{
+        // transform:translateX(-100%);
+        // transition: all 0.25s;
+        // -webkit-transition: all 0.25s;   
+        display: none;
+    }   
+    li{
+        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        padding: 1rem 3rem 1rem 1rem;
+        list-style-type: none;
+        border-radius: 1rem;
+        white-space: nowrap;
+       
+        &:hover{
+            background: #ebebeb;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        & > :nth-child(1){
+           font-size: 3.4vmin;
+        }
+        
+        &:hover >:nth-child(1){
+            color: red;
+        }
+        span{
+            margin-left: 1rem;
+        }
+    }
+
+}
+//////////////////1300px //////////////////////
+@media(max-width:1300px)
+{
+    .sidebar{
+        width: auto;
+        hr{
+            display: none;
+        }
+        li{
+        padding: 1rem 1rem 1rem 1.5rem;
+
+            span{
+                display: none;
+            }
+            & > :nth-child(1){
+                font-size: 2rem;
+             }
+        }
+    }
+}
+//////////////////1300px //////////////////////
+
+///////////////////////////Tablet medium starts////////////
+@media(max-width:$breakpoint-medium) {
+    .sidebar{
+        display: none !important;
+        &.close{
+            display: block !important;
+            position: fixed !important;
+            z-index: 999 !important; 
+            top:10vh;
+        }
+        hr{
+            display: block;
+        }
+        li{
+             font-size: 14px;
+             padding: 0.5rem 1rem 1rem 1.5rem;
+
+            span{
+                display: block;
+                margin-left: 0.5rem;
+                
+            }
+        }
+    }
+}
+///////////////////////////Tablet MEDIUM ends////////////
+
+/////////////////Small PHONES starts///////////////
+@media(max-width : $breakpoint-small){
+    .sidebar{
+        &.close{  
+            li{
+                font-size: 12px;
+                padding: 0.5rem 0.5rem 0.5rem 1rem;
+            }   
+        }
+    }
+}
+/////////////////Small PHONES ends///////////////
